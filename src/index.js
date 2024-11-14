@@ -1,7 +1,6 @@
-import { PageHeading } from "./components";
+import { HomePage } from "./home";
 
-const contentDiv = document.querySelector("#content");
+const home = new HomePage();
+const container = document.querySelector("#content");
 
-const heading = new PageHeading("Testing", "https://utfs.io/f/fvuNAVBL56INkMR5rIsA6321UtOyWpSqvReVTiwQ97PcGlCK");
-
-contentDiv.appendChild(heading.container);
+container.appendChild(home.container);
