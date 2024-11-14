@@ -38,3 +38,18 @@ class Author {
         container.appendChild(author);
     }
 }
+
+//card classes that will be exported
+
+export class PageHeading {
+    constructor() {
+        this.title = new Title();
+        this.image = new Image();
+        this.container = document.createElement("div");
+    }
+    build(title, image) {
+        this.title.addTitle(this.container, title);
+        this.image.addImage(this.container, image);
+        return this.container;
+    }
+}
