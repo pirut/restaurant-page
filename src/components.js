@@ -42,14 +42,73 @@ class Author {
 //card classes that will be exported
 
 export class PageHeading {
-    constructor() {
+    constructor(title, image) {
         this.title = new Title();
         this.image = new Image();
+
         this.container = document.createElement("div");
-    }
-    build(title, image) {
+        this.container.className = "page-heading";
+
         this.title.addTitle(this.container, title);
         this.image.addImage(this.container, image);
-        return this.container;
+    }
+}
+
+export class SectionHeading {
+    constructor(title, image) {
+        this.title = new Title();
+        this.image = new Image();
+
+        this.container = document.createElement("div");
+        this.container.className = "section-heading";
+
+        this.title.addTitle(this.container, title);
+        this.image.addImage(this.container, image);
+    }
+}
+
+export class CustomerTestimonial {
+    constructor(title, author) {
+        this.title = new Title();
+        this.author = new Author();
+
+        this.container = document.createElement("div");
+        this.container.className = "customer-testimonial";
+
+        this.title.addTitle(this.container, title);
+        this.author.addAuthor(this.container, author);
+    }
+}
+
+export class MenuCard {
+    constructor(title, subtext, price, image) {
+        this.title = new Title();
+        this.subtext = new Subtext();
+        this.price = new Price();
+        this.image = new Image();
+
+        this.container = document.createElement("div");
+        this.container.className = "menu-card";
+
+        this.title.addTitle(this.container, title);
+        this.subtext.addSubtext(this.container, subtext);
+        this.price.addPrice(this.container, price);
+        this.image.addImage(this.container, image);
+    }
+}
+
+export class Card {
+    constructor(title, subtext) {
+        this.title = new Title();
+        this.subtext = new Subtext();
+
+        this.container = document.createElement("div");
+        this.container.className = "card";
+
+        this.title.addTitle(this.container, title);
+        this.subtext.addSubtext(this.container, subtext);
+    }
+    addLine(text) {
+        this.subtext.addSubtext(this.container, text);
     }
 }
