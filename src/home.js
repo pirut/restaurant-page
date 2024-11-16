@@ -8,7 +8,7 @@ export class HomePage {
         this.container = document.createElement("div");
         this.container.className = "home";
 
-        this.container.appendChild(this.heading.container);
-        this.container.appendChild(this.card.container);
+        this.container.appendChild(this.heading.modal);
+        this.container.appendChild(this.card.modal);
     }
 }
