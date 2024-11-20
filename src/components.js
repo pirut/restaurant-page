@@ -68,11 +68,12 @@ export class PersonCard {
 }
 
 export class SectionHeading {
-    constructor(title, image) {
+    #image = "https://utfs.io/f/fvuNAVBL56INC3Kb5ipEilKgjpYrSaM2wxX3DW5Tk0qJI7ov";
+    constructor(title) {
         this.container = new Container();
         this.container.class = "section-heading";
         this.container.addTitle(title);
-        this.container.addImage(image);
+        this.container.addImage(this.#image);
     }
     get modal() {
         return this.container.container;
