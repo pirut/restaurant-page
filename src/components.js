@@ -2,9 +2,6 @@ class Container {
     constructor() {
         this.container = document.createElement("div");
     }
-    /**
-     * @param {string} className
-     */
     set class(className) {
         this.container.className = className;
     }
@@ -55,6 +52,20 @@ export class PageHeading {
     }
 }
 
+export class PersonCard {
+    constructor(name, job, phone, email) {
+        this.container = new Container();
+        this.container.class = "person-card";
+        this.container.addTitle(name);
+        this.container.addSubtext(job);
+        this.container.addSubtext(phone);
+        this.container.addSubtext(email);
+    }
+    get modal() {
+        return this.container.container;
+    }
+}
+
 export class SectionHeading {
     constructor(title, image) {
         this.container = new Container();
@@ -68,10 +79,10 @@ export class SectionHeading {
 }
 
 export class CustomerTestimonial {
-    constructor(title, author) {
+    constructor(text, author) {
         this.container = new Container();
         this.container.class = "customer-testimonial";
-        this.container.addTitle(title);
+        this.container.addSubtext(text);
         this.container.addAuthor(author);
     }
     get modal() {

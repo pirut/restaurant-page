@@ -1,3 +1,4 @@
+import "./style.css";
 import { HomePage } from "./home";
 
 const home = new HomePage();

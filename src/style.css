@@ -1,0 +1,30 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.home,
+.menu,
+.contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.page-heading {
+    border: 2px solid black;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.page-heading > .image {
+}
