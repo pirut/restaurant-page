@@ -40,12 +40,13 @@ class Container {
 //card classes that will be exported
 
 export class PageHeading {
-    constructor(title, image) {
+    #image = "https://utfs.io/f/fvuNAVBL56INC3Kb5ipEilKgjpYrSaM2wxX3DW5Tk0qJI7ov";
+    constructor(title) {
         this.container = new Container();
         this.container.class = "page-heading";
-        this.container.addImage(image);
+        this.container.addImage(this.#image);
         this.container.addTitle(title);
-        this.container.addImage(image);
+        this.container.addImage(this.#image);
     }
     get modal() {
         return this.container.container;
