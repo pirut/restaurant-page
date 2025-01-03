@@ -176,3 +176,24 @@ nav {
     justify-self: end;
     text-align: end;
 }
+
+/*Contact Page Styling*/
+
+.contact {
+    gap: 10px;
+}
+
+.person-card {
+    min-width: 400px;
+    border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    text-align: center;
+    justify-items: center;
+    align-items: center;
+    background-color: white;
+    padding: 0px;
+    column-gap: 16px;
+    padding: 6px;
+}
