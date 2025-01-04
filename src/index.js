@@ -8,6 +8,26 @@ const menu = new MenuPage();
 const contact = new ContactPage();
 const container = document.querySelector("#content");
 
-const buttons = document.querySelectorAll("nav");
+const buttons = document.querySelectorAll(".nav-button");
 
-container.appendChild(contact.container);
+buttons.forEach((button) => {
+    button.addEventListener("click", (event) => {
+        while (container.firstChild) {
+            container.removeChild(container.lastChild);
+        }
+        console.log(button);
+        switch (button.id) {
+            case "nav-home":
+                container.appendChild(home.container);
+                break;
+            case "nav-menu":
+                container.appendChild(menu.container);
+                break;
+            case "nav-contact":
+                container.appendChild(contact.container);
+                break;
+        }
+    });
+});
+
+container.appendChild(home.container);
