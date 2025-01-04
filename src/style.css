@@ -199,3 +199,35 @@ nav {
 }
 
 /*Home Page Styling*/
+
+.home {
+    gap: 10px;
+}
+
+.customer-testimonial,
+.card {
+    min-width: 400px;
+    border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    text-align: center;
+    justify-items: center;
+    align-items: center;
+    background-color: white;
+    padding: 0px;
+    column-gap: 16px;
+    padding: 6px;
+}
+
+.customer-testimonial > .subtext {
+    text-align: left;
+    font-style: italic;
+}
+
+.customer-testimonial > .author {
+    text-align: right;
+    align-self: flex-end;
+    font-size: larger;
+    font-weight: bolder;
+}
